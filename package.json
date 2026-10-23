@@ -1,0 +1,32 @@
+{
+  "name": "calculadora-roi-seo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsx watch src/server/index.ts",
+    "build": "vite build",
+    "start": "tsx src/server/index.ts"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.10.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vite-express": "*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.15.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^4.3.3",
+    "vite": "^6.3.3"
+  }
+}

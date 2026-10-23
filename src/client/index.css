@@ -1,0 +1,50 @@
+/* 1. Importa o Tailwind (Versão 4) */
+@import "tailwindcss";
+
+/* 2. Animação de entrada dos resultados */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* 3. Regras de estilo para a hora de gerar o PDF */
+@media print {
+  /* Força o fundo a ser branco para economizar tinta e ficar profissional */
+  body, html {
+    background-color: #ffffff !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Esconde o formulário, os botões e o histórico na hora de imprimir */
+  form, button, .print\:hidden {
+    display: none !important;
+  }
+
+  /* Garante que os cartões e gráficos não sejam cortados no meio da folha */
+  .recharts-responsive-container {
+    width: 100% !important;
+    height: 400px !important;
+    page-break-inside: avoid;
+  }
+
+  /* Ajusta as margens da página do PDF */
+  @page {
+    margin: 1.5cm;
+  }
+  
+  /* Remove sombras pesadas que ficam ruins no papel/PDF */
+  .shadow-sm, .shadow-md, .shadow-lg {
+    box-shadow: none !important;
+  }
+}
